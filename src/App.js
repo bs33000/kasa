@@ -5,14 +5,14 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Accomodation from "./pages/Accomodation/Accomodation";
 import Error from "./pages/Error/Error";
-//import Header from "./components/Header/Header";
+import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 
 
 function App() {
 	return (
 		<div className="App">
-		
+			<Header />
 			<main>
 				<Routes>
 					<Route path="/" element={<Home />} />
