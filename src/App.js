@@ -6,7 +6,7 @@ import About from "./pages/About/About";
 import Accomodation from "./pages/Accomodation/Accomodation";
 import Error from "./pages/Error/Error";
 //import Header from "./components/Header/Header";
-//import Footer from "./components/Footer/Footer";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
 					<Route path="*" element={<Error />} />
 				</Routes>
 			</main>
-
+			<Footer />
 		</div>
 	);
 }
