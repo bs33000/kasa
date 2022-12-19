@@ -1,18 +1,16 @@
 import AboutBanner from "../../components/AboutBanner/AboutBanner";
 import Collapsible from "../../components/Collapsible/Collapsible";
-import aboutContent from "../../assets/content/aboutContent.json"; // j'ai créé un fichier JSON avec les données des collapses
+import aboutContent from "../../assets/content/aboutContent.json"; // json file with list of content
 import React from "react";
 
 export default function About() {
 	return (
 		<>
 			<AboutBanner />
-			{aboutContent.map((rule, id) => (
+			{aboutContent.map((content) => (
 				<Collapsible
-					key={id}
-					aboutTitle={rule.aboutTitle}
-					aboutText={rule.aboutText}
-					aboutStyle="about-style"
+					aboutTitle={content.aboutTitle}
+					aboutText={content.aboutText}
 				/>
 			))}
 		</>
