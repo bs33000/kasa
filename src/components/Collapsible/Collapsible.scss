@@ -1,10 +1,24 @@
-.collapsible{
-	margin-left: 1rem;
-	margin-right: 1rem;
-	display: flex;
-	justify-content: space-evenly;
-	
+
+.collapse-fiche-container {
+	@include flex-column; 
+	width: 100%;
+
+	@media screen and (min-width: $breakpoint-desktop) {
+		flex-direction: row;
+		gap: 5%;
+	}
 }
+
+.collapsible {
+	width: 100%;
+	margin: 20px 0;
+
+	@media screen and (min-width: $breakpoint-desktop) {
+		flex:50%;
+		justify-content:center;
+		}
+}
+
 
 .collapsible .toggle {
 	width: 100%;
@@ -78,13 +92,7 @@
 	transition: 0.1s ease-in-out;
 }
 
-.collapse-fiche-container {
-	/*@include flex-column;*/
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
-	width: 100%;
-}
+
 
 .equipList {
 	list-style-type: none;
