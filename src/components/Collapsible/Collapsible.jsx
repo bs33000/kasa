@@ -3,7 +3,6 @@ import Chevron from "../../assets/images/vectorBas.svg";
 
 function Collapsible (props) {
     const [isOpen, setIsOpen] = useState(false);
-
     const parentRef = useRef(); //assign value to this DOM element
 
     return (
@@ -19,7 +18,7 @@ function Collapsible (props) {
             <div
                 className="content-parent"
                 ref={parentRef}
-                // conditionnal height: if opened then actual heigh as defined by parent.ref DOM element, 
+                // conditionnal height: if opened then actual height as defined by parent.ref DOM element, 
                 // 0px otherwise - note that in REACt style is an Objet
                 style={
                     isOpen ? {

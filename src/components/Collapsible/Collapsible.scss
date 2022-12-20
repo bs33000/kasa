@@ -1,3 +1,11 @@
+.collapsible{
+	margin-left: 1rem;
+	margin-right: 1rem;
+	display: flex;
+	justify-content: space-evenly;
+	
+}
+
 .collapsible .toggle {
 	width: 100%;
 	margin: 20px 0;
@@ -68,4 +76,16 @@
 .rotated {
 	transform: rotate(180deg);
 	transition: 0.1s ease-in-out;
+}
+
+.collapse-fiche-container {
+	/*@include flex-column;*/
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	width: 100%;
+}
+
+.equipList {
+	list-style-type: none;
 }

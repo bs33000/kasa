@@ -7,8 +7,9 @@ export default function About() {
 	return (
 		<>
 			<AboutBanner />
-			{aboutContent.map((content) => (
+			{aboutContent.map((content, index) => (
 				<Collapsible
+					key={index}
 					aboutTitle={content.aboutTitle}
 					aboutText={content.aboutText}
 				/>
