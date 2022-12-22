@@ -2,10 +2,13 @@ import React from "react";
 import Banner from "../../components/Banner/Banner";
 import Card from "../../components/Card/Card";
 import { Link } from "react-router-dom";
-import accomodationData from "../../assets/accomodation/logements.json";
+import fetchAllProducts from "../../Data/fetchAllProducts";
 
 export default function Home() {
- 	return (
+	const accomodationData = fetchAllProducts(); // here, we are using a file, to be replacec by async function
+ 	// const data = await fetchAllProducts(); //when Data will be coming from API call
+	
+	return (
 		<>
 			<Banner />
 			<div className="cards-container">

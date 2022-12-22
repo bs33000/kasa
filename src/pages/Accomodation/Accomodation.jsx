@@ -3,11 +3,14 @@ import { useParams, Navigate } from "react-router-dom";
 import Collapsible from "../../components/Collapsible/Collapsible";
 import Host from "../../components/Host/Host";
 import Tag from "../../components/Tag/Tag";
-import accomodationData from "../../assets/accomodation/logements.json";
 import Rating from "../../components/Rating/Rating";
 import SlideShow from "../../components/SlideShow/SlideShow";
+import fetchAllProducts from "../../Data/fetchAllProducts";
+
 
 export default function Accomodation() {
+	const accomodationData = fetchAllProducts(); // here, we are using a file, to be replacec by async function
+	// const data = await fetchAllProducts(); //when Data will be coming from API call
 	const params = useParams();
 	const housing = accomodationData.find(({ id }) => id === params.id);
 	if (housing === undefined) return <Navigate to="/404" />;
