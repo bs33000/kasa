@@ -24,7 +24,7 @@ export default function Accomodation() {
 
 	return (
 			(
-			<div key={params.id} className="fiche-container">
+			<div key={params.id} className="info-container">
 				<SlideShow slides={slidePics} />
 				<section className="hostInfo-container">
 					<div className="title-tags-container">
@@ -52,7 +52,7 @@ export default function Accomodation() {
 					</div>
 				</section>
 
-				<div className="collapse-fiche-container">
+				<div className="collapse-info-container">
 					<Collapsible aboutTitle="Description" aboutText={housing.description} />
 					<Collapsible aboutTitle="Équipements" aboutText={equip} />
 				</div>

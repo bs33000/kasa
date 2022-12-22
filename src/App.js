@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
@@ -18,7 +17,7 @@ function App() {
 					<Route path="/" element={<Home />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/accomodation/:id" element={<Accomodation />} />
-					<Route path="*" element={<Error />} />
+					<Route path="*" element={<Error />} /> {/* catch-all for any undefined URLs */}
 				</Routes>
 			</main>
 			<Footer />

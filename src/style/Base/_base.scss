@@ -27,7 +27,7 @@ main {
 	color: $primary-color;
 }
 
-.fiche-container {
+.info-container {
 	@include flex-center;
 	flex-direction: column;
 }
