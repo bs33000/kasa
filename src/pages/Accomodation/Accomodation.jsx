@@ -1,31 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useParams, Navigate } from "react-router-dom";
 import Collapsible from "../../components/Collapsible/Collapsible";
 import Host from "../../components/Host/Host";
 import Tag from "../../components/Tag/Tag";
 import accomodationData from "../../assets/accomodation/logements.json";
 import Rating from "../../components/Rating/Rating";
+import SlideShow from "../../components/SlideShow/SlideShow";
 
 export default function Accomodation() {
 	const params = useParams();
 	const housing = accomodationData.find(({ id }) => id === params.id);
 	if (housing === undefined) return <Navigate to="/404" />;
-	
+
 	const slidePics = housing.pictures;
 	const tags = housing.tags;
 	const equipments = housing.equipments;
-	const equip =
-			equipments.map((item, index) => (
+	const equip = equipments.map((item, index) =>
+			(
 				<li key={index} className="equipList">
 					{item}
 				</li>
 			));
-	return (
-		 (
-			<div key={params.id} className="fiche-container">
-				
-				
 
+	return (
+			(
+			<div key={params.id} className="fiche-container">
+				<SlideShow slides={slidePics} />
 				<section className="hostInfo-container">
 					<div className="title-tags-container">
 						<div className="title-container redFont">
@@ -38,7 +38,7 @@ export default function Accomodation() {
 							))}
 						</div>
 					</div>
-					
+
 					<div className="rate-host-container">
 						<div className="host-container redFont">
 							<Host
