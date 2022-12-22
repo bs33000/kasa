@@ -22,7 +22,7 @@
 
 .collapsible .toggle {
 	width: 100%;
-	margin: 20px 0;
+	/*margin: 20px 0;*/
 
 	@media screen and (min-width: $breakpoint-desktop) {
 		margin: 31px auto 0;
@@ -93,7 +93,17 @@
 }
 
 
-
 .equipList {
 	list-style-type: none;
+}
+
+.aboutContainer {
+	width: 100%;
+	@include flex-column;
+
+	@media screen and (min-width: $breakpoint-desktop) {
+		padding-left: 6rem;
+		padding-right: 6rem;
+	
+	}
 }

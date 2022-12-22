@@ -7,6 +7,7 @@ export default function About() {
 	return (
 		<>
 			<AboutBanner />
+			<div className="aboutContainer">
 			{aboutContent.map((content, index) => (
 				<Collapsible
 					key={index}
@@ -14,6 +15,7 @@ export default function About() {
 					aboutText={content.aboutText}
 				/>
 			))}
+			</div>
 		</>
 	);
 }

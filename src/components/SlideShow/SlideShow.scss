@@ -43,7 +43,7 @@
     }
 
     &__number {
-        display: none;
+        display: none; // no number displayed for mobile version on figma prototype 
 
         @media screen and (min-width: $breakpoint-desktop) {
             display: block;
