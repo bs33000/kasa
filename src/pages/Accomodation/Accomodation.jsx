@@ -10,7 +10,7 @@ import fetchAllProducts from "../../Data/fetchAllProducts";
 
 export default function Accomodation() {
 	const accomodationData = fetchAllProducts(); // here, we are using a file, to be replacec by async function
-	// const data = await fetchAllProducts(); //when Data will be coming from API call
+	// const accomodationData = await fetchAllProducts(); //when Data will be coming from API call
 	const params = useParams();
 	const housing = accomodationData.find(({ id }) => id === params.id);
 	if (housing === undefined) return <Navigate to="/404" />;
