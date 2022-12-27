@@ -6,10 +6,6 @@ export default function SlideShow({ slides }) {
 	const [current, setCurrent] = useState(0); // recall that slides is an array, starting index=0
 	const length = slides.length;
 
-	if (length ===0) { //if no picture
-	slides = ["https://github.com/bs33000/kasa/blob/master/src/assets/images/LOGO.png"]
-	}
-
 	const nextSlide = () => {
 		setCurrent(current === length - 1 ? 0 : current + 1); // since slides is an array, the last element number is lenght-1
 	};
